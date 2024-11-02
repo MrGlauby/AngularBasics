@@ -1,0 +1,71 @@
+<div class="wrapper">
+  <div class="wrapper-box">
+    <h3>Das gehört zur DUMB Component app-child-component</h3>
+
+    <!-- ngModel starts ----------------------------------------- -->
+
+    <!--INPUTS And Data  -->
+    <p>
+      Server Daten:
+      {{ person.age }}
+      {{ person.gender }}
+      {{ person.name }}
+    </p>
+
+    <p>{{ today | date : "dd.MM.yyyy" }}</p>
+
+    <!-- ---------------------------------  OUTPUTS -->
+
+    <!-- <button (click)="clickEvent()">TEST Button für Outputs</button> -->
+    <!-- <button (click)="clickEvent()">OUTPUT!!!!!!</button> -->
+    <button (click)="functionForOutputClick()">TEST BUTTON FÜR OUTPUT</button>
+
+    <!-- --------------------------------------------HostBinding! -->
+
+    <!-- <button (click)="isActive =!isActive">TEST für Hostbinding</button> -->
+
+    <!-- -------------------------------------------- HostLiestener! -->
+
+    <p>Press Enter! {{ counter }}</p>
+    <button (click)="resetCounter()">Reset Counter</button>
+
+    <!-- ---------------------------------------------------NG IF BEISPIEL START -->
+
+    <button class="btn" (click)="toggleVisibility()">ngIf Button to show how its works!</button>
+    <div class="ngIf-Style" *ngIf="isVisible">
+      <p>Dieser Text wird nur angezeigt, wenn der Button geklickt wurde!</p>
+    </div>
+
+    <!-- [ngClass] [] starts -->
+
+    <!-- <div
+      class="ngClassElement"
+      *ngFor="let item of items"
+      [ngClass]="{ selected: selectedItem === item }"
+    >
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.description }}</p>
+      <button class="btn-ngClass" (click)="selectItem(item)">
+        HighLight Me!
+      </button>
+    </div> -->
+
+    <!-- [ngStyle][] starts -->
+
+    <!-- <div [ngStyle]="ngStyle">
+      <h2>ngStyle</h2>
+      <p>ich bin gespannt was passiert!</p>
+    </div> -->
+
+    <!-- ---------  [(ngModel)] -->
+
+    <!-- Signals -->
+
+    <hr />
+    <div>
+      <p>Angulars Signals...</p>
+      {{ count() }}
+      <button (click)="increment()">Erhöhe Zähler</button>
+    </div>
+  </div>
+</div>

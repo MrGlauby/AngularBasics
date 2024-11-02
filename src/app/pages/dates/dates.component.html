@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="wrapper-box">
+    <h2>DATES WORKS</h2>
+    <hr />
+    <p>Projekt ShowCase Angular</p>
+
+    <div class="wrapper-mainContent">
+      <button class="btn" routerLink="/about">Navigation to About</button>
+    </div>
+
+
+    <ng-container *ngFor="let person of personDatas">
+      <app-child-component
+      [person]="person"
+      ></app-child-component>
+    </ng-container>
+  </div>
+</div>

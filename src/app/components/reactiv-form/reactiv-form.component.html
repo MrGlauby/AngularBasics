@@ -1,0 +1,21 @@
+<p>reactiv-form works!</p>
+
+
+<pre>{{ testForm.value | json }}</pre>
+
+<form [formGroup]="testForm">
+
+  <label for="first-name">First Name: </label>
+  <input type="text" formControlName="firstName">
+
+  <label for="last-name">Last Name: </label>
+  <input type="text" formControlName="lastName">
+<br>
+<br>
+
+<input type="checkbox" value="Bike" formControlName="checkbox">
+<label for="checkbox"> Check me!</label>
+
+  <button (click)="save()">Save</button>
+
+</form>

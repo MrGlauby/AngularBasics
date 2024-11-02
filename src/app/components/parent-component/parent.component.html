@@ -1,0 +1,38 @@
+
+<div class="wrapper">
+  <div class="wrapper-box">
+    <p>parent works!</p>
+    <p>
+      Hier sind die Daten vom Service, den ich im PARENT entgegen nehme und in
+      der Child über die INPUTS anzeigen lasssen!
+    </p>
+
+  <!-- Direktvie ngFor -->
+    <ng-container *ngFor="let person of personDatas">
+      <app-child-component
+        [person]="person"
+        (functionForOutput)="handleConsoleRequest($event)"
+      ></app-child-component>
+    </ng-container>
+
+    <!--
+
+    <app-dad *ngFor="let cars of carsDatas" [brand]="cars.brand"></app-dad>
+
+    <hr />
+
+    <br />
+
+    <app-mum
+      [mumsName]="'Mum'"
+      [kakadu]="'sdfpäsdfäskdfäsmdfä'"
+      [pupu]="'dfsdfsf'"
+    ></app-mum>
+
+    <h2>Hier kommen die Teams!</h2>
+
+    <ng-container *ngFor="let team of teams">
+      <p>{{ team.name }}</p>
+    </ng-container> -->
+  </div>
+</div>
